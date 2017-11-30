@@ -1,6 +1,6 @@
 # Standards: 0.11
 ---
-
+# rsyslog is the default for amazon linux
 # 4.2.2.5  Ensure remote syslog-ng messages are only accepted on designated log hosts
 
 - name: 4.2.2.5 - Ensure remote syslog-ng messages are only accepted on designated log hosts
@@ -12,3 +12,5 @@
     - "4.2.2.5"
     - not-scored
     - todo
+
+

@@ -1,6 +1,6 @@
 # Standards: 0.11
 ---
-
+# Do we need to add anyore than the defaults here? Would a simple check if the rsyslog conf file be enough?
 # 4.2.1.2 Ensure logging is configured
 
 - name: 4.2.1.2 - Ensure logging is configured

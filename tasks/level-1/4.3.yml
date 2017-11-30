@@ -3,6 +3,8 @@
 
 # 4.3 Ensure logrotate is configured
 
+# Review /etc/logrotate.conf and /etc/logrotate.d/* and verify logs are rotated according to site policy.
+# Should we set the current amazon linux defaults as the generic to check against?
 - name: 4.3 - Ensure logrotate is configured
   debug:
     msg: "WARNING - This check has not been implemented yet."

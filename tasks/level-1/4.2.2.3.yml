@@ -1,5 +1,6 @@
 # Standards: 0.11
 ---
+# rsyslog is the default for amazon linux - skipping
 
 # 4.2.2.3 Ensure syslog-ng default file permissions configured
 
@@ -12,3 +13,5 @@
     - "4.2.2.3"
     - scored
     - todo
+
+

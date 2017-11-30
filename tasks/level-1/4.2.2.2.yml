@@ -1,8 +1,9 @@
 # Standards: 0.11
 ---
 
+# rsyslog is the default for amazon linux - skipping
 # 4.2.2.2 Ensure logging is configured
-
+# rsyslog is the default for amazon linux
 - name: 4.2.2.2 - Ensure logging is configured
   debug:
     msg: "WARNING - This check has not been implemented yet."
@@ -12,3 +13,5 @@
     - "4.2.2.2"
     - not-scored
     - todo
+
+
