@@ -6,7 +6,7 @@
 ###############################################
 
 cis_apply_level_1_profile: true    # Whether Level 1 of the benchmark should be applied
-cis_apply_level_2_profile: false   # Whether Level 2 of the benchmark should be applied
+cis_apply_level_2_profile: true   # Whether Level 2 of the benchmark should be applied
 
 cis_level_1_exclusions: []         # A list of Level 1 recommendations to exclude (i.e. ['1.1.1.1'])
 cis_level_2_exclusions: []         # A list of Level 2 recommendations to exclude
@@ -54,7 +54,7 @@ cis_remote_login_warning_banner: "Authorized uses only. All activity may be moni
 # 2.2.1.1
 # You should only enable either ntp or chrony, but not both.
 cis_enable_ntp: true # Set to true if ntp should be enabled/configured.
-cis_enable_chrony: false # Set to true if chrony should be enabled/configured.
+cis_enable_chrony: true # Set to true if chrony should be enabled/configured.
 
 # 3.4.2
 cis_hosts_allow_all_ips: "127.0.0.1"
