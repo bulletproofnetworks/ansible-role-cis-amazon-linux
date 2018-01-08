@@ -23,6 +23,25 @@ An examples of items that should be immediately considered for exclusion (or at 
 
 * ```3.4.2``` and ```3.4.3```, which by default effectively limit access to the host (including via ssh) to localhost only.
 
+Amazon Linux and SE Linux
+----------------
+By default SElinux is disabled via grub in amazon linux.
+
+To enable edit ;
+
+```/boot/grub/menu.lst```
+
+Modifiy ```selinux=0  to  selinux=1```
+
+```touch /etc/selinux/config```
+
+Also install the following package to allow the ansible SElinux module to function on the host.
+
+```yum install libselinux-python```
+
+A reboot will be neccessary for the changes to take effect.
+
+
 Example Playbook
 ----------------
 
@@ -40,7 +59,7 @@ An example playbook which uses this role is as follows:
     - anthcourtney.cis-amazon-linux
 ```
 
-A more advance example, which includes modifications to the default values used, as well as the exclusion of some items in the benchmark which are considered unnecessary for a fictional environment, is as follows:
+A more advanced example, which includes modifications to the default values used, as well as the exclusion of some items in the benchmark which are considered unnecessary for a fictional environment, is as follows:
 
 ```
 ---
@@ -107,7 +126,7 @@ At present, only the Level 1 items of the benchmark are implemented. Level 2 ite
 
 The following checks have not been implemented:
 
-* 3.6.2. Firewall rulesets are envrionment specific.
+* 3.6.2. Firewall rulesets are environment specific.
 * 3.6.3. Firewall rulesets are environment specific.
 * 3.6.4. Firewall rulesets are environment specific.
 * 3.6.5. Firewall rulesets are environment specific.
@@ -115,12 +134,10 @@ The following checks have not been implemented:
 * 4.2.2.2. The determination of what should be logged and the destination of messages is environment specific.
 * 4.2.2.3. Inline editing of syslog-ng configuration file is considered too imprecise and is best solved by a supplied configuration file which addresses this and other related requirements.
 * 4.2.2.4. Inline editing of syslog-ng configuration file is considered too imprecise and is best solved by a supplied configuration file which addresses this and other related requirements.
-* 4.2.2.5. Inline editing of syslog-ng configuration file is considered too imprecise and is best solved b
-y a supplied configuration file which addresses this and other related requirements.
+* 4.2.2.5. Inline editing of syslog-ng configuration file is considered too imprecise and is best solved by a supplied configuration file which addresses this and other related requirements.
 * 4.3. The configuration of logrotate is site-specific.
 * 5.3.2. Multi-line editing of pam configuration files is considered too imprecise and dangerous, and is best solved by a supplied configuration file which addresses this and other related requirements.
-* 5.3.3. Multi-line editing of pam configuration files is considered too imprecise and dangerous, and is b
-est solved by a supplied configuration file which addresses this and other related requirements.
+* 5.3.3. Multi-line editing of pam configuration files is considered too imprecise and dangerous, and is best solved by a supplied configuration file which addresses this and other related requirements.
 
 Compatibility
 -------------
